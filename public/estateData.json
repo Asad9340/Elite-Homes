@@ -1,6 +1,6 @@
 [
   {
-    "image": "penthouse1.jpg",
+    "image": "https://i.ibb.co/L6Pddyn/Luxury-City-Penthouse.jpg",
     "title": "Luxury City Penthouse",
     "id": "1",
     "name": "Penthouse",
@@ -12,7 +12,7 @@
     "facilities": ["Private rooftop terrace", "Spa", "Gourmet kitchen"]
   },
   {
-    "image": "beachfront1.jpg",
+    "image": "https://i.ibb.co/PFbFQsN/Exquisite-Beachfront-Estate.jpg",
     "title": "Exquisite Beachfront Estate",
     "id": "2",
     "name": "Beachfront properties",
@@ -24,7 +24,7 @@
     "facilities": ["Infinity pool", "Private beach access", "Outdoor kitchen"]
   },
   {
-    "image": "resort1.jpg",
+    "image": "https://i.ibb.co/rbMGp16/Luxury-Resort-Spa.webp",
     "title": "Luxury Resort & Spa",
     "id": "3",
     "name": "Resorts",
@@ -36,7 +36,7 @@
     "facilities": ["Private villas", "Multiple restaurants", "Full-service spa"]
   },
   {
-    "image": "island1.jpg",
+    "image": "https://i.ibb.co/DQyFn45/Private-Island-Paradise.jpg",
     "title": "Private Island Paradise",
     "id": "4",
     "name": "Private Islands",
@@ -48,7 +48,7 @@
     "facilities": ["Luxury villas", "Helipad", "Yacht dock"]
   },
   {
-    "image": "villa1.jpg",
+    "image": "https://i.ibb.co/BqxzgRv/Mediterranean-Villa-Retreat.jpg",
     "title": "Mediterranean Villa Retreat",
     "id": "5",
     "name": "Villas",
@@ -60,7 +60,7 @@
     "facilities": ["Infinity pool", "Gourmet kitchen", "Private courtyard"]
   },
   {
-    "image": "mansion1.jpg",
+    "image": "https://i.ibb.co/2jFGhPc/Mansions.jpg",
     "title": "Grand Colonial Mansion",
     "id": "6",
     "name": "Mansions",
@@ -72,7 +72,7 @@
     "facilities": ["Ballroom", "Wine cellar", "Home theater"]
   },
   {
-    "image": "penthouse2.jpg",
+    "image": "https://i.ibb.co/HqqL6v6/Penthouse.webp",
     "title": "Skyline Penthouse Retreat",
     "id": "7",
     "name": "Penthouse",
@@ -84,7 +84,7 @@
     "facilities": ["Private elevator", "Rooftop pool", "Home automation system"]
   },
   {
-    "image": "villa2.jpg",
+    "image": "https://i.ibb.co/qCvVBxy/Villas.png",
     "title": "Tropical Oasis Villa",
     "id": "8",
     "name": "Villas",
@@ -96,7 +96,7 @@
     "facilities": ["Tropical gardens", "Private pool", "Outdoor dining area"]
   },
   {
-    "image": "beachfront2.jpg",
+    "image": "https://i.ibb.co/p1P9Mmv/Maldives.webp",
     "title": "Coastal Haven",
     "id": "9",
     "name": "Beachfront properties",
