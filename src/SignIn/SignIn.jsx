@@ -9,9 +9,17 @@ import { Link } from 'react-router-dom';
 export function SignIn() {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown(cur => !cur);
-  const { googleLogin, setUser } = useContext(AuthContext);
-  const handleLogin = () => {
+  const { googleLogin, githubLogin, setUser } = useContext(AuthContext);
+  const handleGoogleLogin = () => {
     googleLogin()
+      .then(result => {
+        console.log(result.user);
+        setUser(result.user);
+      })
+      .catch(error => console.log(error));
+  };
+  const handleGithubLogin = () => {
+    githubLogin()
       .then(result => {
         console.log(result.user);
         setUser(result.user);
@@ -82,7 +90,7 @@ export function SignIn() {
         </Button>
         <div className="flex justify-between gap-4 mx-0 md:mx-6">
           <Button
-            onClick={handleLogin}
+            onClick={handleGoogleLogin}
             variant="outlined"
             size="md"
             className="mt-4 flex  items-center justify-center gap-2"
@@ -92,6 +100,7 @@ export function SignIn() {
             google
           </Button>
           <Button
+            onClick={handleGithubLogin}
             variant="outlined"
             size="md"
             className="mt-4 flex  items-center justify-center gap-2"
