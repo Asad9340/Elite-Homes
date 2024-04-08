@@ -1,6 +1,10 @@
-import { createBrowserRouter } from "react-router-dom";
-import Root from "../Layout/Root";
-import Homepage from "../Home/Homepage";
+import { createBrowserRouter } from 'react-router-dom';
+import Root from '../Layout/Root';
+import Homepage from '../Home/Homepage';
+import ViewDetails from '../components/ViewDetails/ViewDetails';
+import PrivateRoute from './PrivateRoute';
+import SignIn from '../SignIn/SignIn';
+import SignUp from '../SignUp/SignUp';
 
 export const router = createBrowserRouter([
   {
@@ -9,8 +13,24 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element:<Homepage/>
-      }
-    ]
+        element: <Homepage />,
+      },
+      {
+        path: '/details/:id',
+        element: (
+          <PrivateRoute>
+            <ViewDetails />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: '/login',
+        element: <SignIn />,
+      },
+      {
+        path: '/register',
+        element: <SignUp/>,
+      },
+    ],
   },
 ]);

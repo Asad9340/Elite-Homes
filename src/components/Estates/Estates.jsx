@@ -1,10 +1,11 @@
 import { Button } from '@material-tailwind/react';
+import { Link } from 'react-router-dom';
 import { FaLocationDot } from 'react-icons/fa6';
 import { HiCurrencyDollar } from 'react-icons/hi2';
 
 function Estates({ estate }) {
   console.log(estate);
-  const { image, title, name, location, price, area, status } = estate;
+  const {id, image, title, name, location, price, area, status } = estate;
   return (
     <div className="relative mb-10">
       <img className="rounded-lg z-10 h-[400px] w-full" src={image} alt="" />
@@ -13,7 +14,7 @@ function Estates({ estate }) {
           {title}
         </h2>{' '}
         <hr className="mx-10 bg-black" />
-        <p>Name: {name}</p>
+        <p className="mt-3">Name: {name}</p>
         <div className="flex justify-between pr-6 ">
           <p className="flex gap-1 items-center">
             <FaLocationDot />
@@ -28,8 +29,10 @@ function Estates({ estate }) {
           </p>
           <p>Area: {area}</p>
         </div>
-        <div className='text-center mt-4'>
-          <Button color="indigo">View Property</Button>
+        <div className="text-center mt-4">
+          <Link to={`/details/${id}`}>
+            <Button color="indigo">View Property</Button>
+          </Link>
         </div>
       </div>
     </div>

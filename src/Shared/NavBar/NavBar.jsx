@@ -6,6 +6,7 @@ import {
   Button,
   IconButton,
 } from '@material-tailwind/react';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -56,30 +57,32 @@ function NavBar() {
     <div>
       <Navbar className="sticky top-0 z-10 h-max max-w-full  px-4 py-2 lg:px-8 lg:py-4 shadow-none bg-primary rounded-t-md rounded-b-none ">
         <div className="flex items-center justify-between text-blue-gray-900">
-          <Typography
-            as="a"
-            href="#"
-            className="mr-4 cursor-pointer py-1.5 font-semibold font-display lg:font-bold text-xl md:text-2xl text-white"
-          >
-            Elite<span className="text-red-700">H</span>omes
-          </Typography>
+          <Link to="/">
+            <Typography className="mr-4 cursor-pointer py-1.5 font-semibold font-display lg:font-bold text-xl md:text-2xl text-white">
+              Elite<span className="text-red-700">H</span>omes
+            </Typography>
+          </Link>
           <div className="flex items-center justify-between gap-8">
             <div className="mr-4 hidden lg:block">{navList}</div>
             <div className="flex items-center gap-x-2">
-              <Button
-                variant="filled"
-                size="md"
-                className="hidden lg:inline-block"
-              >
-                <span>Sign In</span>
-              </Button>
-              <Button
-                variant="filled"
-                size="md"
-                className="hidden lg:inline-block"
-              >
-                <span>Sign Up</span>
-              </Button>
+              <Link to="/login">
+                <Button
+                  variant="filled"
+                  size="md"
+                  className="hidden lg:inline-block"
+                >
+                  <span>Sign In</span>
+                </Button>
+              </Link>
+              <Link to='/register'>
+                <Button
+                  variant="filled"
+                  size="md"
+                  className="hidden lg:inline-block"
+                >
+                  <span>Sign Up</span>
+                </Button>
+              </Link>
             </div>
             <IconButton
               variant="text"
