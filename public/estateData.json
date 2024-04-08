@@ -1,0 +1,114 @@
+[
+  {
+    "image": "penthouse1.jpg",
+    "title": "Luxury City Penthouse",
+    "id": "1",
+    "name": "Penthouse",
+    "description": "Stunning penthouse with panoramic city views. Modern design and luxurious amenities.",
+    "price": "$8,500,000",
+    "status": "sale",
+    "area": "4,500 sq ft",
+    "location": "Manhattan, New York",
+    "facilities": ["Private rooftop terrace", "Spa", "Gourmet kitchen"]
+  },
+  {
+    "image": "beachfront1.jpg",
+    "title": "Exquisite Beachfront Estate",
+    "id": "2",
+    "name": "Beachfront properties",
+    "description": "Breathtaking beachfront estate with direct access to the sand. Elegant design and unrivaled luxury.",
+    "price": "$12,000,000",
+    "status": "sale",
+    "area": "8,000 sq ft",
+    "location": "Maui, Hawaii",
+    "facilities": ["Infinity pool", "Private beach access", "Outdoor kitchen"]
+  },
+  {
+    "image": "resort1.jpg",
+    "title": "Luxury Resort & Spa",
+    "id": "3",
+    "name": "Resorts",
+    "description": "Exclusive luxury resort offering world-class amenities and unparalleled service. Tropical paradise setting.",
+    "price": "Contact for price",
+    "status": "sale",
+    "area": "50 acres",
+    "location": "Bora Bora, French Polynesia",
+    "facilities": ["Private villas", "Multiple restaurants", "Full-service spa"]
+  },
+  {
+    "image": "island1.jpg",
+    "title": "Private Island Paradise",
+    "id": "4",
+    "name": "Private Islands",
+    "description": "Spectacular private island retreat with pristine beaches and lush landscapes. Ultimate luxury and privacy.",
+    "price": "$25,000,000",
+    "status": "sale",
+    "area": "20 acres",
+    "location": "Exumas, Bahamas",
+    "facilities": ["Luxury villas", "Helipad", "Yacht dock"]
+  },
+  {
+    "image": "villa1.jpg",
+    "title": "Mediterranean Villa Retreat",
+    "id": "5",
+    "name": "Villas",
+    "description": "Elegant Mediterranean villa with stunning sea views. Luxurious amenities and beautiful gardens.",
+    "price": "$6,800,000",
+    "status": "sale",
+    "area": "6,000 sq ft",
+    "location": "Ibiza, Spain",
+    "facilities": ["Infinity pool", "Gourmet kitchen", "Private courtyard"]
+  },
+  {
+    "image": "mansion1.jpg",
+    "title": "Grand Colonial Mansion",
+    "id": "6",
+    "name": "Mansions",
+    "description": "Magnificent colonial-style mansion with expansive grounds and opulent interiors. Historic charm and modern luxury.",
+    "price": "$15,000,000",
+    "status": "sale",
+    "area": "15,000 sq ft",
+    "location": "Savannah, Georgia",
+    "facilities": ["Ballroom", "Wine cellar", "Home theater"]
+  },
+  {
+    "image": "penthouse2.jpg",
+    "title": "Skyline Penthouse Retreat",
+    "id": "7",
+    "name": "Penthouse",
+    "description": "Spectacular penthouse retreat with breathtaking skyline views. Luxury living at its finest.",
+    "price": "$10,500,000",
+    "status": "sale",
+    "area": "5,800 sq ft",
+    "location": "Chicago, Illinois",
+    "facilities": ["Private elevator", "Rooftop pool", "Home automation system"]
+  },
+  {
+    "image": "villa2.jpg",
+    "title": "Tropical Oasis Villa",
+    "id": "8",
+    "name": "Villas",
+    "description": "Luxurious villa nestled amidst lush tropical gardens. Tranquil retreat with modern amenities.",
+    "price": "$7,200,000",
+    "status": "sale",
+    "area": "7,500 sq ft",
+    "location": "Phuket, Thailand",
+    "facilities": ["Tropical gardens", "Private pool", "Outdoor dining area"]
+  },
+  {
+    "image": "beachfront2.jpg",
+    "title": "Coastal Haven",
+    "id": "9",
+    "name": "Beachfront properties",
+    "description": "Secluded beachfront sanctuary offering serene coastal living. Unmatched luxury and relaxation.",
+    "price": "$9,800,000",
+    "status": "sale",
+    "area": "9,000 sq ft",
+    "location": "Maldives",
+    "facilities": [
+      "Private beach access",
+      "Infinity pool",
+      "Beachfront terrace"
+    ]
+  }
+]
