@@ -22,6 +22,7 @@ export const router = createBrowserRouter([
             <ViewDetails />
           </PrivateRoute>
         ),
+        loader: () => fetch('/estateData.json'),
       },
       {
         path: '/login',

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Navbar,
   Collapse,
@@ -7,6 +7,7 @@ import {
   IconButton,
 } from '@material-tailwind/react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Firebase/AuthProvider';
 
 function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -18,6 +19,10 @@ function NavBar() {
     );
   }, []);
 
+  const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut();
+  };
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -64,26 +69,36 @@ function NavBar() {
           </Link>
           <div className="flex items-center justify-between gap-8">
             <div className="mr-4 hidden lg:block">{navList}</div>
-            <div className="flex items-center gap-x-2">
-              <Link to="/login">
-                <Button
-                  variant="filled"
-                  size="md"
-                  className="hidden lg:inline-block"
-                >
-                  <span>Sign In</span>
-                </Button>
-              </Link>
-              <Link to='/register'>
-                <Button
-                  variant="filled"
-                  size="md"
-                  className="hidden lg:inline-block"
-                >
-                  <span>Sign Up</span>
-                </Button>
-              </Link>
-            </div>
+            {!user ? (
+              <div className="flex items-center gap-x-2">
+                <Link to="/login">
+                  <Button
+                    variant="filled"
+                    size="md"
+                    className="hidden lg:inline-block"
+                  >
+                    <span>Sign In</span>
+                  </Button>
+                </Link>
+                <Link to="/register">
+                  <Button
+                    variant="filled"
+                    size="md"
+                    className="hidden lg:inline-block"
+                  >
+                    <span>Sign Up</span>
+                  </Button>
+                </Link>
+              </div>
+            ) : (
+              <Button
+                variant="filled"
+                size="md"
+                className="hidden lg:inline-block"
+              >
+                <span onClick={handleLogOut}>LogOut</span>
+              </Button>
+            )}
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-white"
@@ -126,12 +141,16 @@ function NavBar() {
         <Collapse open={openNav}>
           {navList}
           <div className="flex items-center gap-4">
-            <Button fullWidth variant="filled" size="sm" className="">
-              <span>Log In</span>
-            </Button>
-            <Button fullWidth variant="filled" size="sm" className="">
-              <span>Sign in</span>
-            </Button>
+            <Link className="w-full" to="/login">
+              <Button fullWidth variant="filled" size="sm" className="">
+                <span>Log In</span>
+              </Button>
+            </Link>
+            <Link className="w-full" to="/register">
+              <Button fullWidth variant="filled" size="sm" className="">
+                <span>Sign Up</span>
+              </Button>
+            </Link>
           </div>
         </Collapse>
       </Navbar>

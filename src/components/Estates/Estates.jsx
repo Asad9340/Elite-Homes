@@ -4,7 +4,6 @@ import { FaLocationDot } from 'react-icons/fa6';
 import { HiCurrencyDollar } from 'react-icons/hi2';
 
 function Estates({ estate }) {
-  console.log(estate);
   const {id, image, title, name, location, price, area, status } = estate;
   return (
     <div className="relative mb-10">

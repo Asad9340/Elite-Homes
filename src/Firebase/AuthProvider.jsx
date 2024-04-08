@@ -3,37 +3,58 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
 } from 'firebase/auth';
 import { auth } from './firebase.config';
 import { createContext, useEffect, useState } from 'react';
+import { toast } from 'react-hot-toast';
 
 export const AuthContext = createContext();
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
 function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   //create user
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+
+  //email password login
+  const loginUser = (email, password) => {
+    setLoading(true);
+    return signInWithEmailAndPassword(auth, email, password);
   };
   //sign in with google
   const googleLogin = () => {
+    setLoading(true);
     signInWithPopup(auth, googleProvider);
   };
   //sign in with github
   const githubLogin = () => {
+    setLoading(true);
     signInWithPopup(auth, githubProvider);
+  };
+  //logOut
+  const logOut = () => {
+    signOut(auth).then(() => {
+      setUser(null);
+      toast.success('Successfully Logged Out');
+    });
   };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
       console.log(currentUser);
       setUser(currentUser);
+      setLoading(false);
     });
 
     return () => unsubscribe();
-  }, [user]);
+  }, []);
 
   const userInfo = {
     googleLogin,
@@ -41,6 +62,9 @@ function AuthProvider({ children }) {
     setUser,
     user,
     createUser,
+    loginUser,
+    logOut,
+    loading,
   };
   return (
     <AuthContext.Provider value={userInfo}>{children}</AuthContext.Provider>

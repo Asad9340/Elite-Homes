@@ -4,24 +4,42 @@
     "title": "Luxury City Penthouse",
     "id": "1",
     "name": "Penthouse",
-    "description": "Stunning penthouse with panoramic city views. Modern design and luxurious amenities.",
+    "description": "Stunning penthouse with panoramic city views. Modern design and luxurious amenities. Ideal for those seeking urban luxury living.",
     "price": "$8,500,000",
     "status": "sale",
     "area": "4,500 sq ft",
     "location": "Manhattan, New York",
-    "facilities": ["Private rooftop terrace", "Spa", "Gourmet kitchen"]
+    "facilities": ["Private rooftop terrace", "Spa", "Gourmet kitchen"],
+    "wifi": "Yes",
+    "air_condition": "Yes",
+    "contact_number": "+1 (123) 456-7890",
+    "people_capacity": 10,
+    "caution_note": [
+      "No pets allowed.",
+      "Smoking prohibited.",
+      "Use safety equipment."
+    ]
   },
   {
     "image": "https://i.ibb.co/PFbFQsN/Exquisite-Beachfront-Estate.jpg",
     "title": "Exquisite Beachfront Estate",
     "id": "2",
     "name": "Beachfront properties",
-    "description": "Breathtaking beachfront estate with direct access to the sand. Elegant design and unrivaled luxury.",
+    "description": "Breathtaking beachfront estate with direct access to the sand. Elegant design and unrivaled luxury. Experience coastal living at its finest.",
     "price": "$12,000,000",
     "status": "sale",
     "area": "8,000 sq ft",
     "location": "Maui, Hawaii",
-    "facilities": ["Infinity pool", "Private beach access", "Outdoor kitchen"]
+    "facilities": ["Infinity pool", "Private beach access", "Outdoor kitchen"],
+    "wifi": "Yes",
+    "air_condition": "Yes",
+    "contact_number": "+1 (234) 567-8901",
+    "people_capacity": 12,
+    "caution_note": [
+      "No parties allowed.",
+      "Respect the neighbors.",
+      "Follow local regulations."
+    ]
   },
   {
     "image": "https://i.ibb.co/rbMGp16/Luxury-Resort-Spa.webp",
@@ -33,7 +51,20 @@
     "status": "sale",
     "area": "50 acres",
     "location": "Bora Bora, French Polynesia",
-    "facilities": ["Private villas", "Multiple restaurants", "Full-service spa"]
+    "facilities": [
+      "Private villas",
+      "Multiple restaurants",
+      "Full-service spa"
+    ],
+    "wifi": "Yes",
+    "air_condition": "Yes",
+    "contact_number": "+1 (345) 678-9012",
+    "people_capacity": 50,
+    "caution_note": [
+      "Children must be supervised.",
+      "Respect the environment.",
+      "Follow resort rules."
+    ]
   },
   {
     "image": "https://i.ibb.co/DQyFn45/Private-Island-Paradise.jpg",
@@ -45,7 +76,16 @@
     "status": "sale",
     "area": "20 acres",
     "location": "Exumas, Bahamas",
-    "facilities": ["Luxury villas", "Helipad", "Yacht dock"]
+    "facilities": ["Luxury villas", "Helipad", "Yacht dock"],
+    "wifi": "Yes",
+    "air_condition": "Yes",
+    "contact_number": "+1 (456) 789-0123",
+    "people_capacity": 20,
+    "caution_note": [
+      "Private property.",
+      "No unauthorized visitors.",
+      "Respect island regulations."
+    ]
   },
   {
     "image": "https://i.ibb.co/BqxzgRv/Mediterranean-Villa-Retreat.jpg",
@@ -57,7 +97,16 @@
     "status": "sale",
     "area": "6,000 sq ft",
     "location": "Ibiza, Spain",
-    "facilities": ["Infinity pool", "Gourmet kitchen", "Private courtyard"]
+    "facilities": ["Infinity pool", "Gourmet kitchen", "Private courtyard"],
+    "wifi": "Yes",
+    "air_condition": "Yes",
+    "contact_number": "+1 (567) 890-1234",
+    "people_capacity": 8,
+    "caution_note": [
+      "Guests must respect villa rules.",
+      "No loud music after hours.",
+      "Keep the property clean."
+    ]
   },
   {
     "image": "https://i.ibb.co/2jFGhPc/Mansions.jpg",
@@ -69,7 +118,16 @@
     "status": "sale",
     "area": "15,000 sq ft",
     "location": "Savannah, Georgia",
-    "facilities": ["Ballroom", "Wine cellar", "Home theater"]
+    "facilities": ["Ballroom", "Wine cellar", "Home theater"],
+    "wifi": "Yes",
+    "air_condition": "Yes",
+    "contact_number": "+1 (678) 901-2345",
+    "people_capacity": 25,
+    "caution_note": [
+      "No open flames indoors.",
+      "Use caution on stairs.",
+      "Report any damages immediately."
+    ]
   },
   {
     "image": "https://i.ibb.co/HqqL6v6/Penthouse.webp",
@@ -81,7 +139,20 @@
     "status": "sale",
     "area": "5,800 sq ft",
     "location": "Chicago, Illinois",
-    "facilities": ["Private elevator", "Rooftop pool", "Home automation system"]
+    "facilities": [
+      "Private elevator",
+      "Rooftop pool",
+      "Home automation system"
+    ],
+    "wifi": "Yes",
+    "air_condition": "Yes",
+    "contact_number": "+1 (789) 012-3456",
+    "people_capacity": 15,
+    "caution_note": [
+      "Use safety equipment.",
+      "Respect privacy of other residents.",
+      "No loud noises after hours."
+    ]
   },
   {
     "image": "https://i.ibb.co/qCvVBxy/Villas.png",
@@ -93,7 +164,16 @@
     "status": "sale",
     "area": "7,500 sq ft",
     "location": "Phuket, Thailand",
-    "facilities": ["Tropical gardens", "Private pool", "Outdoor dining area"]
+    "facilities": ["Tropical gardens", "Private pool", "Outdoor dining area"],
+    "wifi": "Yes",
+    "air_condition": "Yes",
+    "contact_number": "+1 (890) 123-4567",
+    "people_capacity": 10,
+    "caution_note": [
+      "No pets allowed.",
+      "Respect the environment.",
+      "Follow villa rules."
+    ]
   },
   {
     "image": "https://i.ibb.co/p1P9Mmv/Maldives.webp",
@@ -109,6 +189,15 @@
       "Private beach access",
       "Infinity pool",
       "Beachfront terrace"
+    ],
+    "wifi": "Yes",
+    "air_condition": "Yes",
+    "contact_number": "+1 (901) 234-5678",
+    "people_capacity": 12,
+    "caution_note": [
+      "Beware of strong currents.",
+      "Swim at your own risk.",
+      "Beach is not monitored."
     ]
   }
 ]

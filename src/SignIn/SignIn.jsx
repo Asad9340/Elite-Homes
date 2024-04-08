@@ -5,11 +5,12 @@ import { Typography, Input, Button } from '@material-tailwind/react';
 import { EyeSlashIcon, EyeIcon } from '@heroicons/react/24/solid';
 import { AuthContext } from '../Firebase/AuthProvider';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 
 export function SignIn() {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown(cur => !cur);
-  const { googleLogin, githubLogin, setUser } = useContext(AuthContext);
+  const { googleLogin, githubLogin,loginUser, setUser } = useContext(AuthContext);
   const handleGoogleLogin = () => {
     googleLogin()
       .then(result => {
@@ -26,6 +27,22 @@ export function SignIn() {
       })
       .catch(error => console.log(error));
   };
+
+  const handleLoginUser = (e) => {
+    e.preventDefault();
+    setPasswordShown(false);
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    loginUser(email,password)
+      .then((result) => {
+        setUser(result.user);
+        toast.success('Login Successfully!')
+      })
+      .catch(error => {
+        console.log(error);
+        toast.error('Wrong Email or Password');
+      });
+  }
   return (
     <section className="grid text-center  items-center p-8">
       <Typography variant="h3" color="blue-gray" className="mb-2">
@@ -34,7 +51,10 @@ export function SignIn() {
       <Typography className="mb-6 text-gray-600 font-normal text-[18px]">
         Enter your email and password to sign in
       </Typography>
-      <form action="#" className="mx-auto max-w-[24rem] text-left">
+      <form
+        onSubmit={handleLoginUser}
+        className="mx-auto max-w-[24rem] text-left"
+      >
         <div className="mb-6">
           <label htmlFor="email">
             <Typography
@@ -68,6 +88,7 @@ export function SignIn() {
           </label>
           <Input
             size="lg"
+            name='password'
             placeholder="********"
             labelProps={{
               className: 'hidden',
