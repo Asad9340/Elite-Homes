@@ -84,7 +84,7 @@ function NavBar() {
             </div>
             <IconButton
               variant="text"
-              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+              className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden text-white"
               ripple={false}
               onClick={() => setOpenNav(!openNav)}
             >
@@ -123,11 +123,11 @@ function NavBar() {
         </div>
         <Collapse open={openNav}>
           {navList}
-          <div className="flex items-center gap-x-1">
-            <Button fullWidth variant="text" size="sm" className="">
+          <div className="flex items-center gap-4">
+            <Button fullWidth variant="filled" size="sm" className="">
               <span>Log In</span>
             </Button>
-            <Button fullWidth variant="gradient" size="sm" className="">
+            <Button fullWidth variant="filled" size="sm" className="">
               <span>Sign in</span>
             </Button>
           </div>
