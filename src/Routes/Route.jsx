@@ -5,11 +5,13 @@ import ViewDetails from '../components/ViewDetails/ViewDetails';
 import PrivateRoute from './PrivateRoute';
 import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
+import Error from '../Error/Error';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
+    errorElement:<Error/>,
     children: [
       {
         path: '/',
