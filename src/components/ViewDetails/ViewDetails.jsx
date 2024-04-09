@@ -8,8 +8,9 @@ import { GrStatusInfo } from 'react-icons/gr';
 import { BiSolidArea } from 'react-icons/bi';
 function ViewDetails() {
   const { id } = useParams();
-  const data = useLoaderData();
-  const specificData = data.filter(item => item.id === id);
+  const userData = useLoaderData();
+
+  const specificData = userData.filter(item => item.id === id);
   const [
     {
       image,
@@ -32,7 +33,7 @@ function ViewDetails() {
         {title}
       </h2>
       <div className="mb-10">
-        <img className="rounded-lg h-[500px] w-full" src={image} alt="" />
+        <img className="rounded-lg h-[400px] lg:h-[500px] w-full" src={image} alt="" />
         <div className="mt-4 md:mt-8 grid gap-4 grid-cols-1 md:grid-cols-3 px-4 md:px-8">
           <div className="col-span-2">
             <h2 className="text-xl font-semibold">Category: {name}</h2>
