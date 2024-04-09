@@ -35,8 +35,8 @@ function UpdateProfile() {
         <div
           className={
             name
-              ? 'block relative w-full h-10 rounded-lg bg-gray-300 pl-4 placeholder:text-gray-700'
-              : 'hidden relative w-full h-10 rounded-lg bg-gray-300 pl-4 placeholder:text-gray-700'
+              ? 'block relative w-full h-10 rounded-lg bg-gray-300  placeholder:text-gray-700'
+              : 'hidden relative w-full h-10 rounded-lg bg-gray-300  placeholder:text-gray-700'
           }
         >
           <input
