@@ -24,21 +24,21 @@ function Banner() {
         <SwiperSlide>
           <img
             className="h-[350px] md:h-[550px] w-full  rounded-b-lg"
-            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/338038657.jpg?k=1767f8d4ad74e77e36d19d363bb8f17e3bbddc0044f6527db066a7d519b46e55&o=&hp=1"
+            src="https://www.travelplusstyle.com/wp-content/uploads/2016/01/sonevajani-1880.jpg"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             className="h-[350px] md:h-[550px] w-full  rounded-lg"
-            src="https://media.cntraveler.com/photos/5e5e9a3617b1dc0008f2fbfe/master/pass/EauPalmBeachResort&Spa-PalmBeachFlorida-2020-5.jpg"
+            src="https://www.cvent.com/sites/default/files/image/2018-07/luxury-hotel.jpg"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
             className="h-[350px] md:h-[550px] w-full  rounded-lg"
-            src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/536391058.jpg?k=cd571323ffcfba0283cb7936a019706b314b098d3dc8d841547db21d7371e82a&o=&hp=1"
+            src="https://p4.wallpaperbetter.com/wallpaper/624/380/1000/life-resort-hotel-resort-hotel-wallpaper-preview.jpg"
             alt=""
           />
         </SwiperSlide>
@@ -52,7 +52,7 @@ function Banner() {
         <SwiperSlide>
           <img
             className="h-[350px] md:h-[550px]  w-full  rounded-lg"
-            src="https://i0.wp.com/theluxurytravelexpert.com/wp-content/uploads/2020/02/JADE-MOUNTAIN-ST-LUCIA.jpg?ssl=1"
+            src="https://dream.luxuryescapes.com/wp-content/uploads/2023/06/t8xuapagxnvh8yf5a3cb-1024x576.webp?crop=1"
             alt=""
           />
         </SwiperSlide>
