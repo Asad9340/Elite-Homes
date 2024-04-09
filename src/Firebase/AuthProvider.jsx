@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from 'firebase/auth';
 import { auth } from './firebase.config';
 import { createContext, useEffect, useState } from 'react';
@@ -36,13 +37,26 @@ function AuthProvider({ children }) {
   //sign in with github
   const githubLogin = () => {
     setLoading(true);
-   return signInWithPopup(auth, githubProvider);
+    return signInWithPopup(auth, githubProvider);
   };
   //logOut
   const logOut = () => {
     signOut(auth).then(() => {
       setUser(null);
       toast.success('Successfully Logged Out');
+    });
+  };
+
+  //update profile
+  const userNameUpdate = name => {
+    return updateProfile(auth.currentUser, {
+      displayName: name,
+    });
+  };
+  //update profile
+  const userProfileUpdate = profile => {
+    return updateProfile(auth.currentUser, {
+      photoURL: profile,
     });
   };
 
@@ -64,6 +78,8 @@ function AuthProvider({ children }) {
     createUser,
     loginUser,
     logOut,
+    userProfileUpdate,
+    userNameUpdate,
     loading,
   };
   return (

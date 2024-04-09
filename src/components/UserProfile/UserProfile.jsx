@@ -6,7 +6,7 @@ function UserProfile() {
   console.log(user)
   return (
     <div className="flex  justify-center items-center h-screen">
-      <div className=" -mt-10 border p-4 rounded-lg ">
+      <div className=" -mt-10 border p-4 rounded-lg space-y-2">
         <div className='flex justify-center'>
           <img className="rounded-lg" src={user?.photoURL} alt="" />
         </div>
