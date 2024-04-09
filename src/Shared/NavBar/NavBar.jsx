@@ -140,18 +140,28 @@ function NavBar() {
         </div>
         <Collapse open={openNav}>
           {navList}
-          <div className="flex items-center gap-4">
-            <Link className="w-full" to="/login">
-              <Button fullWidth variant="filled" size="sm" className="">
-                <span>Log In</span>
-              </Button>
-            </Link>
-            <Link className="w-full" to="/register">
-              <Button fullWidth variant="filled" size="sm" className="">
-                <span>Sign Up</span>
-              </Button>
-            </Link>
-          </div>
+          {user ? (
+            <Button
+              variant="filled"
+              size="md"
+              className="hidden lg:inline-block"
+            >
+              <span onClick={handleLogOut}>LogOut</span>
+            </Button>
+          ) : (
+            <div className="flex items-center gap-4">
+              <Link className="w-full" to="/login">
+                <Button fullWidth variant="filled" size="sm" className="">
+                  <span>Log In</span>
+                </Button>
+              </Link>
+              <Link className="w-full" to="/register">
+                <Button fullWidth variant="filled" size="sm" className="">
+                  <span>Sign Up</span>
+                </Button>
+              </Link>
+            </div>
+          )}
         </Collapse>
       </Navbar>
     </div>
