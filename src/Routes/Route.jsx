@@ -6,12 +6,13 @@ import PrivateRoute from './PrivateRoute';
 import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
 import Error from '../Error/Error';
+import UpdateProfile from '../components/UpdateProfile/UpdateProfile';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <Root />,
-    errorElement:<Error/>,
+    errorElement: <Error />,
     children: [
       {
         path: '/',
@@ -32,11 +33,15 @@ export const router = createBrowserRouter([
       },
       {
         path: '/register',
-        element: <SignUp/>,
+        element: <SignUp />,
       },
       {
         path: '/updateprofile',
-        element: <h1>Profile is updating</h1>,
+        element: (
+          <PrivateRoute>
+            <UpdateProfile/>
+          </PrivateRoute>
+        ),
       },
       {
         path: '/profile',
