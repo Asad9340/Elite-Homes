@@ -5,9 +5,12 @@ import {
   Typography,
   Button,
   IconButton,
+  Avatar,
+  Tooltip,
 } from '@material-tailwind/react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Firebase/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 
 function NavBar() {
   const [openNav, setOpenNav] = React.useState(false);
@@ -18,10 +21,11 @@ function NavBar() {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
-
+    const navigate = useNavigate();
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut();
+    navigate('/')
   };
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -31,9 +35,16 @@ function NavBar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center font-display text-white">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? 'flex items-center  px-3 py-2 rounded-md duration-300 font-semibold font-display text-secondary bg-gray-50'
+              : 'flex items-center font-display text-white px-3 py-2'
+          }
+        >
           Home
-        </a>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
@@ -41,9 +52,16 @@ function NavBar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center font-display text-white">
+        <NavLink
+          to="/updateprofile"
+          className={({ isActive }) =>
+            isActive
+              ? 'flex items-center  px-3 py-2 rounded-md duration-300 font-semibold font-display text-secondary bg-gray-50'
+              : 'flex items-center font-display text-white px-3 py-2'
+          }
+        >
           Update Profile
-        </a>
+        </NavLink>
       </Typography>
       <Typography
         as="li"
@@ -51,16 +69,23 @@ function NavBar() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center font-display text-white">
+        <NavLink
+          to="/profile"
+          className={({ isActive }) =>
+            isActive
+              ? 'flex items-center  px-3 py-2 rounded-md duration-300 font-semibold font-display text-secondary bg-gray-50'
+              : 'flex items-center font-display text-white px-3 py-2'
+          }
+        >
           User Profile
-        </a>
+        </NavLink>
       </Typography>
     </ul>
   );
 
   return (
     <div>
-      <Navbar className="sticky top-0 z-10 h-max max-w-full  px-4 py-2 lg:px-8 lg:py-4 shadow-none bg-primary rounded-t-md rounded-b-none ">
+      <Navbar style={{borderWidth:0}} className="sticky top-0 z-10 h-max max-w-full  px-4 py-2 lg:px-8 lg:py-4 shadow-none bg-primary rounded-t-md rounded-b-none ">
         <div className="flex items-center justify-between text-blue-gray-900">
           <Link to="/">
             <Typography className="mr-4 cursor-pointer py-1.5 font-semibold font-display lg:font-bold text-xl md:text-2xl text-white">
@@ -91,13 +116,28 @@ function NavBar() {
                 </Link>
               </div>
             ) : (
-              <Button
-                variant="filled"
-                size="md"
-                className="hidden lg:inline-block"
-              >
-                <span onClick={handleLogOut}>LogOut</span>
-              </Button>
+              <div className="flex gap-2">
+                <Tooltip content={user ? user.displayName : 'Asad'}>
+                  <Avatar
+                    size="sm"
+                    variant="circular"
+                    alt="tania andrew"
+                    src={
+                      user
+                        ? user.photoURL
+                        : 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80'
+                    }
+                    className="border-2 border-white hover:z-10"
+                  />
+                </Tooltip>
+                <Button
+                  variant="filled"
+                  size="md"
+                  className="hidden lg:inline-block"
+                >
+                  <span onClick={handleLogOut}>LogOut</span>
+                </Button>
+              </div>
             )}
             <IconButton
               variant="text"
@@ -141,13 +181,28 @@ function NavBar() {
         <Collapse open={openNav}>
           {navList}
           {user ? (
-            <Button
-              variant="filled"
-              size="md"
-              className="hidden lg:inline-block"
-            >
-              <span onClick={handleLogOut}>LogOut</span>
-            </Button>
+            <div className="flex gap-2">
+              <Tooltip content="Tania Andrew">
+                <Avatar
+                  size="sm"
+                  variant="circular"
+                  alt="tania andrew"
+                  src={
+                    user
+                      ? user.photoURL
+                      : 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80'
+                  }
+                  className="border-2 border-white hover:z-10"
+                />
+              </Tooltip>
+              <Button
+                variant="filled"
+                size="sm"
+                className="inline-block lg:hidden"
+              >
+                <span onClick={handleLogOut}>LogOut</span>
+              </Button>
+            </div>
           ) : (
             <div className="flex items-center gap-4">
               <Link className="w-full" to="/login">

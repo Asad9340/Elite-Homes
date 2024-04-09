@@ -2,10 +2,10 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../Firebase/AuthProvider';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
-
 function SignUp() {
   const [error, setError] = useState('');
   const { createUser, setUser } = useContext(AuthContext);
+
   const handleRegistration = e => {
     e.preventDefault();
     const email = e.target.email.value;

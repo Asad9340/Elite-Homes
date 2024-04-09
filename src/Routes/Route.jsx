@@ -32,6 +32,14 @@ export const router = createBrowserRouter([
         path: '/register',
         element: <SignUp/>,
       },
+      {
+        path: '/updateprofile',
+        element: <h1>Profile is updating</h1>,
+      },
+      {
+        path: '/profile',
+        element: <h1>User Profile</h1>,
+      },
     ],
   },
 ]);

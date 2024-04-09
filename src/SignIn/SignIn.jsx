@@ -4,18 +4,24 @@ import { FaGithub } from 'react-icons/fa';
 import { Typography, Input, Button } from '@material-tailwind/react';
 import { EyeSlashIcon, EyeIcon } from '@heroicons/react/24/solid';
 import { AuthContext } from '../Firebase/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 export function SignIn() {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown(cur => !cur);
-  const { googleLogin, githubLogin,loginUser, setUser } = useContext(AuthContext);
+  const { googleLogin, githubLogin, loginUser, setUser } =
+    useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location?.state || '/';
   const handleGoogleLogin = () => {
     googleLogin()
       .then(result => {
         console.log(result.user);
         setUser(result.user);
+        navigate(from);
       })
       .catch(error => console.log(error));
   };
@@ -24,25 +30,26 @@ export function SignIn() {
       .then(result => {
         console.log(result.user);
         setUser(result.user);
+        navigate(from);
       })
       .catch(error => console.log(error));
   };
 
-  const handleLoginUser = (e) => {
+  const handleLoginUser = e => {
     e.preventDefault();
     setPasswordShown(false);
     const email = e.target.email.value;
     const password = e.target.password.value;
-    loginUser(email,password)
-      .then((result) => {
+    loginUser(email, password)
+      .then(result => {
         setUser(result.user);
-        toast.success('Login Successfully!')
+        toast.success('Login Successfully!');
       })
       .catch(error => {
         console.log(error);
         toast.error('Wrong Email or Password');
       });
-  }
+  };
   return (
     <section className="grid text-center  items-center p-8">
       <Typography variant="h3" color="blue-gray" className="mb-2">
@@ -88,7 +95,7 @@ export function SignIn() {
           </label>
           <Input
             size="lg"
-            name='password'
+            name="password"
             placeholder="********"
             labelProps={{
               className: 'hidden',
