@@ -4,12 +4,15 @@ import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 function SignUp() {
   const [error, setError] = useState('');
-  const { createUser, setUser } = useContext(AuthContext);
+  const { createUser, setUser, userNameUpdate, userProfileUpdate } =
+    useContext(AuthContext);
 
   const handleRegistration = e => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const name = e.target.name.value;
+    const profile = e.target.photoURL.value;
     setError('');
     if (password.length < 6) {
       setError('Password must be at least 6 characters');
@@ -27,7 +30,11 @@ function SignUp() {
     createUser(email, password)
       .then(result => {
         setUser(result.user);
-        toast.success('Successfully Created Account!');
+        userNameUpdate(name)
+          .then(() => {
+            toast.success('Successfully Created Account!');
+          })
+        userProfileUpdate(profile);
       })
       .catch(error => console.log(error.message));
   };

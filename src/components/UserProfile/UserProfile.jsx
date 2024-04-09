@@ -8,7 +8,7 @@ function UserProfile() {
     <div className="flex  justify-center items-center h-screen">
       <div className=" -mt-10 border p-4 rounded-lg space-y-2">
         <div className='flex justify-center'>
-          <img className="rounded-lg" src={user?.photoURL} alt="" />
+          <img className="rounded-lg w-36" src={user?.photoURL} alt="" />
         </div>
         <p className='flex-wrap max-w-2xl'>{user.photoURL}</p>
         <h2 className="text-3xl font-bold">Name: {user?.displayName}</h2>
