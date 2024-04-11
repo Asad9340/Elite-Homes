@@ -8,7 +8,9 @@ const About = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-4 text-center">About Us</h1>
+        <h1 className="text-3xl font-bold mb-4 text-center animate__animated animate__bounce">
+          About Us
+        </h1>
         <p className="text-lg text-gray-700 mb-6">
           Welcome to BookBud, your ultimate destination for discovering and
           exploring a wide range of books from various genres. Whether you are a

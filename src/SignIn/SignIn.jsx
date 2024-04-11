@@ -11,6 +11,7 @@ import {Helmet} from "react-helmet";
 
 
 export function SignIn() {
+   const [error, setError] = useState('');
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown(cur => !cur);
   const { googleLogin, githubLogin, loginUser, setUser } =
@@ -36,7 +37,7 @@ export function SignIn() {
       })
       .catch(error => console.log(error));
   };
-
+  setUser('');
   const handleLoginUser = e => {
     e.preventDefault();
     setPasswordShown(false);
@@ -48,7 +49,7 @@ export function SignIn() {
         toast.success('Login Successfully!');
       })
       .catch(error => {
-        console.log(error);
+         setError('Wrong Email or Password', error.message);
         toast.error('Wrong Email or Password');
       });
   };
@@ -93,7 +94,7 @@ export function SignIn() {
               }}
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-3">
             <label htmlFor="password">
               <Typography
                 variant="small"
@@ -122,11 +123,14 @@ export function SignIn() {
               }
             />
           </div>
+          <small className="text-red-700 -mb-3 ">
+            {error}
+          </small>
           <Button
             type="submit"
             color="gray"
             size="lg"
-            className="mt-6"
+            className="mt-4"
             fullWidth
           >
             sign in
