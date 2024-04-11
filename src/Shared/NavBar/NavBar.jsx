@@ -21,11 +21,11 @@ function NavBar() {
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
-    const navigate = useNavigate();
+  const navigate = useNavigate();
   const { user, logOut } = useContext(AuthContext);
   const handleLogOut = () => {
     logOut();
-    navigate('/')
+    navigate('/');
   };
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -80,12 +80,34 @@ function NavBar() {
           User Profile
         </NavLink>
       </Typography>
+      {user && (
+        <Typography
+          as="li"
+          variant="small"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive
+                ? 'flex items-center  px-3 py-2 rounded-md duration-300 font-semibold font-display text-secondary bg-gray-50'
+                : 'flex items-center font-display text-white px-3 py-2'
+            }
+          >
+            About
+          </NavLink>
+        </Typography>
+      )}
     </ul>
   );
 
   return (
     <div>
-      <Navbar style={{borderWidth:0}} className="sticky top-0 z-10 h-max max-w-full  px-4 py-2 lg:px-8 lg:py-4 shadow-none bg-primary rounded-t-md rounded-b-none ">
+      <Navbar
+        style={{ borderWidth: 0 }}
+        className="sticky top-0 z-10 h-max max-w-full  px-4 py-2 lg:px-8 lg:py-4 shadow-none bg-primary rounded-t-md rounded-b-none "
+      >
         <div className="flex items-center justify-between text-blue-gray-900">
           <Link to="/">
             <Typography className="mr-4 cursor-pointer py-1.5 font-semibold font-display lg:font-bold text-xl md:text-2xl text-white">

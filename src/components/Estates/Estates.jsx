@@ -8,6 +8,12 @@ function Estates({ estate }) {
   return (
     <div className="relative mb-10">
       <img className="rounded-lg z-10 h-[400px] w-full" src={image} alt="" />
+      <p className="text-xs  rounded-xl flex flex-col items-center justify-center absolute top-4 right-4 px-6 py-3 bg-primary text-textSecondary">
+        <p>www.elitehomes.com</p>
+        <span className="text-lg">
+          For <span className='text-2xl font-semibold'>{status}</span>
+        </span>
+      </p>
       <div className="-mt-4 hover:absolute hover:-mt-20 duration-300 bg-secondary text-textSecondary hover:bg-red-500 z-40 w-full px-4 md:px-6 py-6 md:py-8 rounded-b-lg">
         <h2 className="text-xl md:text-2xl font-medium md:font-semibold text-center">
           {title}

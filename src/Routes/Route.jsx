@@ -8,6 +8,7 @@ import SignUp from '../SignUp/SignUp';
 import Error from '../Error/Error';
 import UpdateProfile from '../components/UpdateProfile/UpdateProfile';
 import UserProfile from '../components/UserProfile/UserProfile'
+import About from '../components/AboutPage/About';
 export const router = createBrowserRouter([
   {
     path: '/',
@@ -34,6 +35,10 @@ export const router = createBrowserRouter([
       {
         path: '/register',
         element: <SignUp />,
+      },
+      {
+        path: '/about',
+        element: <About/>
       },
       {
         path: '/updateprofile',
