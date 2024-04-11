@@ -4,15 +4,14 @@ import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 function SignUp() {
   const [error, setError] = useState('');
-  const { createUser, setUser, userNameUpdate, userProfileUpdate } =
-    useContext(AuthContext);
+  const { createUser, setUser } = useContext(AuthContext);
 
   const handleRegistration = e => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const name = e.target.name.value;
-    const profile = e.target.photoURL.value;
+    // const name = e.target.name.value;
+    // const profile = e.target.photoURL.value;
     setError('');
     if (password.length < 6) {
       setError('Password must be at least 6 characters');
@@ -30,11 +29,11 @@ function SignUp() {
     createUser(email, password)
       .then(result => {
         setUser(result.user);
-        userNameUpdate(name)
-          .then(() => {
-            toast.success('Successfully Created Account!');
-          })
-        userProfileUpdate(profile);
+        toast.success('Successfully Created Account!');
+        // userNameUpdate(name)
+        //   .then(() => {
+        //   })
+        // userProfileUpdate(profile);
       })
       .catch(error => console.log(error.message));
   };
@@ -111,7 +110,7 @@ function SignUp() {
           </button>
           <p className="block mt-2 font-sans text-base antialiased font-normal leading-relaxed text-center text-gray-700">
             Already have an account?
-            <Link to='/login' className="font-medium text-gray-900">
+            <Link to="/login" className="font-medium text-gray-900">
               Sign In
             </Link>
           </p>

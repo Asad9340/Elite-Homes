@@ -32,11 +32,13 @@ function AuthProvider({ children }) {
   //sign in with google
   const googleLogin = () => {
     setLoading(true);
+    setUser(null);
     return signInWithPopup(auth, googleProvider);
   };
   //sign in with github
   const githubLogin = () => {
     setLoading(true);
+    setUser(null);
     return signInWithPopup(auth, githubProvider);
   };
   //logOut
