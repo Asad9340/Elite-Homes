@@ -13,7 +13,6 @@ function UpdateProfile() {
     setName(!name);
   };
   const handlePhotoEdit = () => {
-    console.log('clicked');
     setPhoto(!photo);
   };
   const handleNameUpdate = () => {
@@ -43,10 +42,10 @@ function UpdateProfile() {
         <title>Elite Homes | Update Profile</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <div className="mt-10 flex justify-center max-w-xl mx-auto border border-red-500 p-4 rounded-lg">
+      <div className="mt-10 flex justify-center max-w-xl mx-auto bg-gray-200 p-5 rounded-lg">
         <form className="flex flex-col w-full space-y-3">
           <div>
-            <div className="flex justify-between gap-3 mb-2">
+            <div className="flex justify-between items-center gap-3 mb-2">
               <div>
                 <h2 className="text-2xl font-semibold mb-2">
                   Name: {displayName}{' '}
@@ -82,7 +81,7 @@ function UpdateProfile() {
             </div>
           </div>
           <div>
-            <div className="flex justify-between gap-3 mb-2 ">
+            <div className="flex justify-between items-center gap-3 mb-2 ">
               <div>
                 {' '}
                 <h2 className="text-lg font-semibold mb-2 break-all">
