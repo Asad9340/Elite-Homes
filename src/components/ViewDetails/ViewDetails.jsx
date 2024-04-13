@@ -24,6 +24,7 @@ function ViewDetails() {
       price,
       status,
       area,
+      caution_note,
     },
   ] = specificData;
 
@@ -33,7 +34,11 @@ function ViewDetails() {
         {title}
       </h2>
       <div className="mb-10">
-        <img className="rounded-lg h-[400px] lg:h-[500px] w-full" src={image} alt="" />
+        <img
+          className="rounded-lg h-[400px] lg:h-[500px] w-full"
+          src={image}
+          alt=""
+        />
         <div className="mt-4 md:mt-8 grid gap-4 grid-cols-1 md:grid-cols-3 px-4 md:px-8">
           <div className="col-span-2">
             <h2 className="text-xl font-semibold">Category: {name}</h2>
@@ -67,6 +72,16 @@ function ViewDetails() {
                   Area: {area}
                 </p>
               </div>
+            </div>
+            <div>
+              <p className="mt-6 md:mt-10 text-lg  md:text-xl font-semibold underline">
+                Caution Note
+              </p>
+              {caution_note.map((item, index) => (
+                <li className="text-lg font-medium text-gray-800" key={index}>
+                  {item}
+                </li>
+              ))}
             </div>
           </div>
           <div className="border border-secondary h-min rounded-md">

@@ -1,17 +1,16 @@
 import { useContext, useState } from 'react';
 import { AuthContext } from '../Firebase/AuthProvider';
 import { toast } from 'react-hot-toast';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { Input } from '@material-tailwind/react';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
 function SignUp() {
   const [error, setError] = useState('');
   const { createUser, setUser } = useContext(AuthContext);
-
-    const [passwordShown, setPasswordShown] = useState(false);
-    const togglePasswordVisiblity = () => setPasswordShown(cur => !cur);
-
+  const [passwordShown, setPasswordShown] = useState(false);
+  const togglePasswordVisiblity = () => setPasswordShown(cur => !cur);
+  const navigate = useNavigate();
   const handleRegistration = e => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -36,6 +35,7 @@ function SignUp() {
       .then(result => {
         setUser(result.user);
         toast.success('Successfully Created Account!');
+        navigate('/')
       })
       .catch(error => console.log(error.message));
   };
