@@ -3,14 +3,12 @@ import { AuthContext } from '../../Firebase/AuthProvider';
 import { Button } from '@material-tailwind/react';
 import { Helmet } from 'react-helmet';
 function UpdateProfile() {
-
-
-  const { user, userProfileUpdate,userNameUpdate } = useContext(AuthContext);
+  const { user, userProfileUpdate, userNameUpdate } = useContext(AuthContext);
   const { displayName, photoURL } = user;
   const [name, setName] = useState(false);
   const [photo, setPhoto] = useState(false);
   const nameRef = useRef(null);
-  const photoRef=useRef(null);
+  const photoRef = useRef(null);
   const handleNameEdit = () => {
     setName(!name);
   };
@@ -45,15 +43,21 @@ function UpdateProfile() {
         <title>Elite Homes | Update Profile</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <div className="mt-10 flex justify-center max-w-lg mx-auto">
-        <form className="flex flex-col w-full">
+      <div className="mt-10 flex justify-center max-w-xl mx-auto border border-red-500 p-4 rounded-lg">
+        <form className="flex flex-col w-full space-y-3">
           <div>
-            <h2 className="text-2xl font-semibold mb-2">
-              Name: {displayName}{' '}
-              <Button onClick={handleNameEdit} variant="filled">
-                Edit
-              </Button>
-            </h2>
+            <div className="flex justify-between gap-3 mb-2">
+              <div>
+                <h2 className="text-2xl font-semibold mb-2">
+                  Name: {displayName}{' '}
+                </h2>
+              </div>
+              <div>
+                <Button onClick={handleNameEdit} variant="filled">
+                  Edit
+                </Button>
+              </div>
+            </div>
             <div
               className={
                 name
@@ -78,12 +82,19 @@ function UpdateProfile() {
             </div>
           </div>
           <div>
-            <h2 className="text-lg font-semibold mb-2">
-              Photo URL: {photoURL}{' '}
-              <Button onClick={handlePhotoEdit} variant="filled">
-                Edit
-              </Button>
-            </h2>
+            <div className="flex justify-between gap-3 mb-2 ">
+              <div>
+                {' '}
+                <h2 className="text-lg font-semibold mb-2 break-all">
+                  Photo URL: {photoURL}{' '}
+                </h2>
+              </div>
+              <div>
+                <Button onClick={handlePhotoEdit} variant="filled">
+                  Edit
+                </Button>
+              </div>
+            </div>
             <div
               className={
                 photo
