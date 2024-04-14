@@ -1,6 +1,4 @@
-
 function CustomerReview() {
-
   return (
     <div>
       <h2 className="text-2xl md:text-4xl font-semibold text-center border p-4">
@@ -8,7 +6,11 @@ function CustomerReview() {
       </h2>
 
       <div className="grid gap-4 grid-cols-1 md:grid-cols-3 m-8">
-        <div className="border border-red-500 p-4 rounded-lg">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1700"
+          className="border border-red-500 p-4 rounded-lg"
+        >
           <div className="flex gap-2 items-center">
             {' '}
             <img className="w-12 rounded-full border h-12" src="" alt="" />
@@ -89,11 +91,18 @@ function CustomerReview() {
               </span>
             </div>
           </div>
-          <p>EliteHomes: User-friendly, diverse luxury listings, detailed descriptions, responsive design, and excellent customer support for upscale property seekers.</p>
+          <p>
+            EliteHomes: User-friendly, diverse luxury listings, detailed
+            descriptions, responsive design, and excellent customer support for
+            upscale property seekers.
+          </p>
         </div>
-        <div className="border border-red-500 p-4 rounded-lg">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="1800"
+          className="border border-red-500 p-4 rounded-lg"
+        >
           <div className="flex gap-2 items-center">
-            {' '}
             <img className="w-12 rounded-full border h-12" src="" alt="" />
             <h3 className="text-xl font-semibold">Sifat</h3>
           </div>
@@ -172,9 +181,17 @@ function CustomerReview() {
               </span>
             </div>
           </div>
-          <p>EliteHomes: User-friendly, diverse luxury listings, detailed descriptions, responsive design, and excellent customer support for upscale property seekers.</p>
+          <p>
+            EliteHomes: User-friendly, diverse luxury listings, detailed
+            descriptions, responsive design, and excellent customer support for
+            upscale property seekers.
+          </p>
         </div>
-        <div className="border border-red-500 p-4 rounded-lg">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1900"
+          className="border border-red-500 p-4 rounded-lg"
+        >
           <div className="flex gap-2 items-center">
             {' '}
             <img className="w-12 rounded-full border h-12" src="" alt="" />
@@ -255,9 +272,17 @@ function CustomerReview() {
               </span>
             </div>
           </div>
-          <p>EliteHomes: User-friendly, diverse luxury listings, detailed descriptions, responsive design, and excellent customer support for upscale property seekers.</p>
+          <p>
+            EliteHomes: User-friendly, diverse luxury listings, detailed
+            descriptions, responsive design, and excellent customer support for
+            upscale property seekers.
+          </p>
         </div>
-        <div className="border border-red-500 p-4 rounded-lg">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          className="border border-red-500 p-4 rounded-lg"
+        >
           <div className="flex gap-2 items-center">
             {' '}
             <img className="w-12 rounded-full border h-12" src="" alt="" />
@@ -338,9 +363,17 @@ function CustomerReview() {
               </span>
             </div>
           </div>
-          <p>EliteHomes: User-friendly, diverse luxury listings, detailed descriptions, responsive design, and excellent customer support for upscale property seekers.</p>
+          <p>
+            EliteHomes: User-friendly, diverse luxury listings, detailed
+            descriptions, responsive design, and excellent customer support for
+            upscale property seekers.
+          </p>
         </div>
-        <div className="border border-red-500 p-4 rounded-lg">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="2100"
+          className="border border-red-500 p-4 rounded-lg"
+        >
           <div className="flex gap-2 items-center">
             {' '}
             <img className="w-12 rounded-full border h-12" src="" alt="" />
@@ -421,9 +454,17 @@ function CustomerReview() {
               </span>
             </div>
           </div>
-          <p>EliteHomes: User-friendly, diverse luxury listings, detailed descriptions, responsive design, and excellent customer support for upscale property seekers.</p>
+          <p>
+            EliteHomes: User-friendly, diverse luxury listings, detailed
+            descriptions, responsive design, and excellent customer support for
+            upscale property seekers.
+          </p>
         </div>
-        <div className="border border-red-500 p-4 rounded-lg">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="2200"
+          className="border border-red-500 p-4 rounded-lg"
+        >
           <div className="flex gap-2 items-center">
             {' '}
             <img className="w-12 rounded-full border h-12" src="" alt="" />
@@ -504,11 +545,15 @@ function CustomerReview() {
               </span>
             </div>
           </div>
-          <p>EliteHomes: User-friendly, diverse luxury listings, detailed descriptions, responsive design, and excellent customer support for upscale property seekers.</p>
+          <p>
+            EliteHomes: User-friendly, diverse luxury listings, detailed
+            descriptions, responsive design, and excellent customer support for
+            upscale property seekers.
+          </p>
         </div>
       </div>
     </div>
   );
 }
 
-export default CustomerReview
+export default CustomerReview;

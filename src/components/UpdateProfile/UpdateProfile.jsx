@@ -15,13 +15,14 @@ function UpdateProfile() {
   const handlePhotoEdit = () => {
     setPhoto(!photo);
   };
-  const handleNameUpdate = () => {
+  const handleNameUpdate = (e) => {
+    e.preventDefault();
     const name = nameRef.current.value;
     console.log(name);
     userNameUpdate(name)
       .then(() => {
         console.log('success name change');
-        window.location.reload();
+        
       })
       .catch(() => console.log('error'));
   };
@@ -45,7 +46,7 @@ function UpdateProfile() {
       <div className="mt-10 flex justify-center max-w-xl mx-auto bg-gray-200 p-5 rounded-lg">
         <form className="flex flex-col w-full space-y-3">
           <div>
-            <div className="flex justify-between items-center gap-3 mb-2">
+            <div className="flex justify-between items-center gap-2 mb-2">
               <div>
                 <h2 className="text-2xl font-semibold mb-2">
                   Name: {displayName}{' '}
@@ -81,7 +82,7 @@ function UpdateProfile() {
             </div>
           </div>
           <div>
-            <div className="flex justify-between items-center gap-3 mb-2 ">
+            <div className="flex justify-between items-center gap-2 mb-2 ">
               <div>
                 {' '}
                 <h2 className="text-lg font-semibold mb-2 break-all">

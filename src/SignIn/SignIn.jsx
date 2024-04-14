@@ -48,13 +48,13 @@ export function SignIn() {
         setUser(result.user);
         toast.success('Login Successfully!');
       })
-      .catch(error => {
-         setError('Wrong Email or Password', error.message);
+      .catch(() => {
+         setError('Wrong Email or Password');
         toast.error('Wrong Email or Password');
       });
   };
   return (
-    <>
+    <div>
       {' '}
       <Helmet>
         <meta charSet="utf-8" />
@@ -169,7 +169,7 @@ export function SignIn() {
           </Typography>
         </form>
       </section>
-    </>
+    </div>
   );
 }
 

@@ -1,16 +1,18 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Helmet } from 'react-helmet';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  Autoplay,
+  A11y,
+} from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
+import 'swiper/css/bundle';
 function Banner() {
   return (
     <>
-      {' '}
       <Helmet>
         <meta charSet="utf-8" />
         <title>Elite Homes </title>
@@ -19,21 +21,27 @@ function Banner() {
       <div className="">
         <Swiper
           // install Swiper modules
-          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          modules={[Navigation, Pagination, Autoplay, Scrollbar, A11y]}
           spaceBetween={50}
           slidesPerView={1}
           loop={true}
-          autoplay={true}
+          autoplay={{ delay: 3000 }}
           navigation
-          pagination={{ clickable: true }}
+          pagination={{
+            clickable: true,
+            type: 'fraction',
+          }}
           scrollbar={{ draggable: true }}
         >
-          <SwiperSlide>
+          <SwiperSlide className="relative">
             <img
               className="h-[350px] md:h-[550px] w-full  rounded-b-lg"
               src="https://www.travelplusstyle.com/wp-content/uploads/2016/01/sonevajani-1880.jpg"
               alt=""
             />
+            <h1 className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-2xl md:text-4xl font-semibold text-red-500">
+              Hotel
+            </h1>
           </SwiperSlide>
           <SwiperSlide>
             <img

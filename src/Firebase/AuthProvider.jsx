@@ -64,8 +64,13 @@ function AuthProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
-      setUser(currentUser);
-      setLoading(false);
+      if (currentUser) {
+        setUser(currentUser);
+        setLoading(false);
+      }
+      else {
+        console.log('User is sign out')
+      }
     });
 
     return () => unsubscribe();

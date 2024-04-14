@@ -5,7 +5,7 @@ function Luxury() {
   return (
     <div className="my-4 md:my-8 lg:my-10">
       <div className="border p-4 bg-primary rounded-md">
-        <h2 className="text-3xl md:text-5xl font-semibold md:font-bold text-center text-textSecondary">
+        <h2 className="text-3xl md:text-5xl font-semibold md:font-bold text-center text-textSecondary animate__animated animate__bounce">
           Luxury
         </h2>
       </div>
