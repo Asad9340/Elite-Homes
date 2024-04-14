@@ -1,6 +1,6 @@
 function CustomerReview() {
   return (
-    <div>
+    <div className="max-w-6xl">
       <h2 className="text-2xl md:text-4xl font-semibold text-center border p-4">
         Customer Review
       </h2>

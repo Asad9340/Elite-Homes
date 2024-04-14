@@ -8,7 +8,7 @@ AOS.init();
 function Estates({ estate }) {
   const { id, image, title, name, location, price, area, status } = estate;
   return (
-    <div className="relative mb-48">
+    <div className="relative mb-52 md:mb-48">
       <img
         data-aos="zoom-in"
         data-aos-duration="500"
@@ -42,9 +42,9 @@ function Estates({ estate }) {
           <div
             data-aos="fade-right"
             data-aos-duration="1400"
-            className="flex justify-between pr-6 "
+            className="flex justify-between pr-6  text-sm md:text-lg"
           >
-            <p className="flex gap-1 items-center animate__animated animate__backInLeft animate__delay-1s">
+            <p className="flex gap-1 items-center">
               <FaLocationDot />
               Location:
               {location}
@@ -56,7 +56,7 @@ function Estates({ estate }) {
           <div
             data-aos="fade-left"
             data-aos-duration="1800"
-            className="flex justify-between pr-6 "
+            className="flex justify-between pr-6  text-sm md:text-lg"
           >
             <p className="flex gap-1 items-center ">
               <HiCurrencyDollar /> Price: {price}
