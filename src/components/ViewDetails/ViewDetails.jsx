@@ -9,8 +9,8 @@ import { BiSolidArea } from 'react-icons/bi';
 function ViewDetails() {
   const { id } = useParams();
   const userData = useLoaderData();
-
   const specificData = userData.filter(item => item.id === id);
+  console.log(specificData);
   const [
     {
       image,

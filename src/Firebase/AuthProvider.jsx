@@ -67,9 +67,8 @@ function AuthProvider({ children }) {
       if (currentUser) {
         setUser(currentUser);
         setLoading(false);
-      }
-      else {
-        console.log('User is sign out')
+      } else {
+        console.log('User is sign out');
       }
     });
 

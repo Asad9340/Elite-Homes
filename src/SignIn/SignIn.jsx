@@ -4,14 +4,12 @@ import { FaGithub } from 'react-icons/fa';
 import { Typography, Input, Button } from '@material-tailwind/react';
 import { EyeSlashIcon, EyeIcon } from '@heroicons/react/24/solid';
 import { AuthContext } from '../Firebase/AuthProvider';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
-import {Helmet} from "react-helmet";
-
+import { Helmet } from 'react-helmet';
 
 export function SignIn() {
-   const [error, setError] = useState('');
+  const [error, setError] = useState('');
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown(cur => !cur);
   const { googleLogin, githubLogin, loginUser, setUser } =
@@ -22,8 +20,8 @@ export function SignIn() {
   const handleGoogleLogin = () => {
     googleLogin()
       .then(result => {
-        toast.success('SignIn with Google Successfully');
         setUser(result.user);
+        toast.success('SignIn with Google Successfully');
         navigate(from);
       })
       .catch(error => console.log(error));
@@ -37,7 +35,6 @@ export function SignIn() {
       })
       .catch(error => console.log(error));
   };
-  setUser('');
   const handleLoginUser = e => {
     e.preventDefault();
     setPasswordShown(false);
@@ -47,9 +44,10 @@ export function SignIn() {
       .then(result => {
         setUser(result.user);
         toast.success('Login Successfully!');
+        navigate(from);
       })
       .catch(() => {
-         setError('Wrong Email or Password');
+        setError('Wrong Email or Password');
         toast.error('Wrong Email or Password');
       });
   };
@@ -123,9 +121,7 @@ export function SignIn() {
               }
             />
           </div>
-          <small className="text-red-700 -mb-3 ">
-            {error}
-          </small>
+          <small className="text-red-700 -mb-3 ">{error}</small>
           <Button
             type="submit"
             color="gray"

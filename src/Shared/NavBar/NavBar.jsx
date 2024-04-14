@@ -153,11 +153,12 @@ function NavBar() {
                   />
                 </Tooltip>
                 <Button
+                  onClick={handleLogOut}
                   variant="filled"
                   size="md"
                   className="hidden lg:inline-block"
                 >
-                  <span onClick={handleLogOut}>LogOut</span>
+                  <span>LogOut</span>
                 </Button>
               </div>
             )}
