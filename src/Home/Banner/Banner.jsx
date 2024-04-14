@@ -40,7 +40,7 @@ function Banner() {
               alt=""
             />
             <div className="absolute bottom-0 text-center pb-6 left-0 right-0 bg-black bg-opacity-50 p-4 text-white">
-              <h2 className="text-xl font-bold">Luxury Beachfront Villa</h2>
+              <h2 className="text-xl font-bold">Luxury Resort & Spa</h2>
               <p className="mt-2">
                 Oceanfront retreat with panoramic views and private beach
                 access.
@@ -54,7 +54,7 @@ function Banner() {
               alt=""
             />
             <div className="absolute bottom-0 text-center pb-6 left-0 right-0 bg-black bg-opacity-50 p-4 text-white">
-              <h2 className="text-xl font-bold">Luxury Beachfront Villa</h2>
+              <h2 className="text-xl font-bold">Luxury City Penthouse</h2>
               <p className="mt-2">
                 Oceanfront retreat with panoramic views and private beach
                 access.
@@ -68,7 +68,7 @@ function Banner() {
               alt=""
             />
             <div className="absolute bottom-0 text-center pb-6 left-0 right-0 bg-black bg-opacity-50 p-4 text-white">
-              <h2 className="text-xl font-bold">Luxury Beachfront Villa</h2>
+              <h2 className="text-xl font-bold">Grand Colonial Mansion</h2>
               <p className="mt-2">
                 Oceanfront retreat with panoramic views and private beach
                 access.
@@ -96,7 +96,7 @@ function Banner() {
               alt=""
             />
             <div className="absolute bottom-0 text-center pb-6 left-0 right-0 bg-black bg-opacity-50 p-4 text-white">
-              <h2 className="text-xl font-bold">Luxury Beachfront Villa</h2>
+              <h2 className="text-xl font-bold">Private Island Paradise</h2>
               <p className="mt-2">
                 Oceanfront retreat with panoramic views and private beach
                 access.
