@@ -2,6 +2,7 @@ import { useContext, useRef, useState } from 'react';
 import { AuthContext } from '../../Firebase/AuthProvider';
 import { Button } from '@material-tailwind/react';
 import { Helmet } from 'react-helmet';
+import toast from 'react-hot-toast';
 function UpdateProfile() {
   const { user, userProfileUpdate, userNameUpdate } = useContext(AuthContext);
   const { displayName, photoURL } = user;
@@ -18,17 +19,15 @@ function UpdateProfile() {
   const handleNameUpdate = (e) => {
     e.preventDefault();
     const name = nameRef.current.value;
-    console.log(name);
     userNameUpdate(name)
       .then(() => {
-        console.log('success name change');
-        
+        toast.success('success name change');
+
       })
       .catch(() => console.log('error'));
   };
   const handleProfileUpdate = () => {
     const profile = photoRef.current.value;
-    console.log(profile);
     userProfileUpdate(profile)
       .then(() => {
         console.log('success image change');

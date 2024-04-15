@@ -121,7 +121,9 @@ export function SignIn() {
               }
             />
           </div>
-          <small className="text-red-700 -mb-3 ">{error}</small>
+          <small className="text-red-700 -mb-3 animate__animated animate__shakeX">
+            {error}
+          </small>
           <Button
             type="submit"
             color="gray"

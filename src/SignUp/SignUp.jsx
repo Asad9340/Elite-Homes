@@ -7,7 +7,8 @@ import { Input } from '@material-tailwind/react';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
 function SignUp() {
   const [error, setError] = useState('');
-  const { createUser, setUser } = useContext(AuthContext);
+  const { createUser, setUser, userNameUpdate, userProfileUpdate } =
+    useContext(AuthContext);
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown(cur => !cur);
   const navigate = useNavigate();
@@ -15,8 +16,8 @@ function SignUp() {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    // const name = e.target.name.value;
-    // const profile = e.target.photoURL.value;
+    const name = e.target.name.value;
+    const profile = e.target.photoURL.value;
     setError('');
     if (password.length < 6) {
       setError('Password must be at least 6 characters');
@@ -30,12 +31,19 @@ function SignUp() {
       setError('Password must contain Lowercase letter');
       return;
     }
-    console.log(email, password);
     createUser(email, password)
       .then(result => {
-        setUser(result.user);
-        toast.success('Successfully Created Account!');
-        navigate('/')
+        userNameUpdate(name)
+          .then(() => {
+            userProfileUpdate(profile)
+              .then(() => {
+                setUser(result.user);
+                toast.success('Successfully Created Account!');
+                navigate('/');
+              })
+              .catch(err => console.log(err));
+          })
+          .catch(err => console.log(err));
       })
       .catch(error => console.log(error.message));
   };

@@ -5,14 +5,13 @@ import Loader from '../components/Spinner/Loader';
 function PrivateRoute({ children }) {
   const location = useLocation();
   const { user, loading } = useContext(AuthContext);
-
-  if (user) {
-    if (loading) {
-       <Loader />;
+    if (!user) {
+      return <Navigate to="/login" state={location?.pathname} />;
     }
-    return <div> {children}</div>;
+  if (loading) {
+   return <Loader />;
   }
-  return <Navigate to="/login" state={location?.pathname} />;
+  return <div> {children}</div>;
 }
 
 export default PrivateRoute;
