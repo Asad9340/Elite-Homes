@@ -26,7 +26,6 @@ function AuthProvider({ children }) {
 
   //email password login
   const loginUser = (email, password) => {
-    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   //sign in with google
@@ -64,12 +63,8 @@ function AuthProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, currentUser => {
-      if (currentUser) {
-        setUser(currentUser);
-        setLoading(false);
-      } else {
-        console.log('User is sign out');
-      }
+      setUser(currentUser);
+      setLoading(false);
     });
 
     return () => unsubscribe();
