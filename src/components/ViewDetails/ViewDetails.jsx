@@ -30,6 +30,11 @@ function ViewDetails() {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Elite Homes | Details</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <h2
         data-aos="fade-down"
         data-aos-duration="500"
