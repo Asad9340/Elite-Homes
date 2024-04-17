@@ -4,7 +4,7 @@ Welcome to MyWebsite! This website is designed to [briefly describe the purpose
 of your website].
 
 ### Live Site URL Firebase
-[https://elite-homes-3b134.web.app/login]
+[https://elite-homes-3b134.web.app/]
 
 ### Live site on surge
 [https://elithomes.surge.sh/]
