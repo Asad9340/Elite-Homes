@@ -49,14 +49,9 @@ function AuthProvider({ children }) {
   };
 
   //update profile
-  const userNameUpdate = name => {
+  const updateUserProfile = (name, profile) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
-    });
-  };
-  //update profile
-  const userProfileUpdate = profile => {
-    return updateProfile(auth.currentUser, {
       photoURL: profile,
     });
   };
@@ -78,8 +73,7 @@ function AuthProvider({ children }) {
     createUser,
     loginUser,
     logOut,
-    userProfileUpdate,
-    userNameUpdate,
+    updateUserProfile,
     loading,
   };
   return (

@@ -7,8 +7,7 @@ import { Input } from '@material-tailwind/react';
 import { EyeIcon, EyeSlashIcon } from '@heroicons/react/24/solid';
 function SignUp() {
   const [error, setError] = useState('');
-  const { createUser, setUser, userNameUpdate, userProfileUpdate } =
-    useContext(AuthContext);
+  const { createUser, setUser, updateUserProfile } = useContext(AuthContext);
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown(cur => !cur);
   const navigate = useNavigate();
@@ -33,17 +32,13 @@ function SignUp() {
     }
     createUser(email, password)
       .then(result => {
-        userNameUpdate(name)
-          .then(() => {
-            userProfileUpdate(profile)
+            updateUserProfile(name,profile)
               .then(() => {
                 setUser(result.user);
                 toast.success('Successfully Created Account!');
                 navigate('/');
               })
               .catch(err => console.log(err));
-          })
-          .catch(err => console.log(err));
       })
       .catch(error => console.log(error.message));
   };
