@@ -6,6 +6,7 @@ import { IoMdPricetag } from 'react-icons/io';
 import { useParams, useLoaderData } from 'react-router-dom';
 import { GrStatusInfo } from 'react-icons/gr';
 import { BiSolidArea } from 'react-icons/bi';
+import { Helmet } from 'react-helmet';
 function ViewDetails() {
   const { id } = useParams();
   const userData = useLoaderData();
