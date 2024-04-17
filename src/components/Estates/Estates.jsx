@@ -10,8 +10,6 @@ function Estates({ estate }) {
   return (
     <div className="relative mb-52 md:mb-48">
       <img
-        data-aos="zoom-in"
-        data-aos-duration="500"
         className="rounded-t-lg z-10 h-[350px] md:h-[400px] w-full"
         src={image}
         alt=""

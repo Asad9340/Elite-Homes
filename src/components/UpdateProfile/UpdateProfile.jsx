@@ -41,7 +41,7 @@ export function UpdateProfile() {
                   variant="small"
                   className="mb-2 block font-medium text-gray-900 font-display"
                 >
-                  Your Name
+                  New Name
                 </Typography>
               </label>
               <Input
@@ -63,7 +63,7 @@ export function UpdateProfile() {
                   variant="small"
                   className="mb-2 block font-medium text-gray-900 font-display"
                 >
-                  Your PhotoURL
+                  New PhotoURL
                 </Typography>
               </label>
               <Input
