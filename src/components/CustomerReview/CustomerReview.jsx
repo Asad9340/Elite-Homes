@@ -8,7 +8,7 @@ function CustomerReview() {
       <div className="grid gap-4 grid-cols-1 md:grid-cols-3 m-8">
         <div
           data-aos="fade-down"
-          data-aos-duration="1700"
+          data-aos-duration="2100"
           className="border border-red-500 p-4 rounded-lg"
         >
           <div className="flex gap-2 items-center">
@@ -99,7 +99,7 @@ function CustomerReview() {
         </div>
         <div
           data-aos="fade-down"
-          data-aos-duration="1800"
+          data-aos-duration="2100"
           className="border border-red-500 p-4 rounded-lg"
         >
           <div className="flex gap-2 items-center">
@@ -188,8 +188,8 @@ function CustomerReview() {
           </p>
         </div>
         <div
-          data-aos="fade-up"
-          data-aos-duration="1900"
+          data-aos="fade-down"
+          data-aos-duration="2100"
           className="border border-red-500 p-4 rounded-lg"
         >
           <div className="flex gap-2 items-center">
@@ -279,8 +279,8 @@ function CustomerReview() {
           </p>
         </div>
         <div
-          data-aos="fade-down"
-          data-aos-duration="2000"
+          data-aos="fade-up"
+          data-aos-duration="2100"
           className="border border-red-500 p-4 rounded-lg"
         >
           <div className="flex gap-2 items-center">
@@ -462,7 +462,7 @@ function CustomerReview() {
         </div>
         <div
           data-aos="fade-up"
-          data-aos-duration="2200"
+          data-aos-duration="2100"
           className="border border-red-500 p-4 rounded-lg"
         >
           <div className="flex gap-2 items-center">
