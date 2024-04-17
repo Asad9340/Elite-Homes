@@ -5,7 +5,7 @@ import { AuthContext } from '../../Firebase/AuthProvider';
 import toast from 'react-hot-toast';
 
 export function UpdateProfile() {
-  const { updateUserProfile } = useContext(AuthContext);
+  const { updateUserProfile ,user,setUser} = useContext(AuthContext);
   const handleUpdate = (e)=> {
     e.preventDefault();
     const name = e.target.name.value;
@@ -13,6 +13,7 @@ export function UpdateProfile() {
     if (name && profile) {
           updateUserProfile(name, profile)
             .then(() => {
+              setUser({ ...user, userName: name, photoURL: profile });
               toast.success('Successfully Name and Email changed!');
             })
             .catch(err => console.log(err));
