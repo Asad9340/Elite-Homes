@@ -143,7 +143,7 @@ function NavBar() {
                   <Avatar
                     size="sm"
                     variant="circular"
-                    alt="tania andrew"
+                    alt="userName"
                     src={
                       user
                         ? user.photoURL
@@ -205,11 +205,11 @@ function NavBar() {
           {navList}
           {user ? (
             <div className="flex gap-2">
-              <Tooltip content="Tania Andrew">
+              <Tooltip content={user ? user.displayName : 'Asad'}>
                 <Avatar
                   size="sm"
                   variant="circular"
-                  alt="tania andrew"
+                  alt="userName"
                   src={
                     user
                       ? user.photoURL
