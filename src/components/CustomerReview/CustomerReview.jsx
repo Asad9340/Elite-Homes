@@ -5,7 +5,7 @@ function CustomerReview() {
         Customer Review
       </h2>
 
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-3 m-8">
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-8">
         <div
           data-aos="fade-down"
           data-aos-duration="2100"
