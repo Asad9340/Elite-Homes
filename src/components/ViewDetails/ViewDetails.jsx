@@ -30,7 +30,11 @@ function ViewDetails() {
 
   return (
     <>
-      <h2 className="sticky top-0 text-2xl md:text-3xl lg:text-4xl font-medium  lg:font-semibold text-center mb-4 bg-[#353358] text-white py-10 md:py-10 rounded-b-lg">
+      <h2
+        data-aos="fade-down"
+        data-aos-duration="500"
+        className="sticky z-50 top-0 text-2xl md:text-3xl lg:text-4xl font-medium  lg:font-semibold text-center mb-4 bg-[#353358] text-white py-10 md:py-10 rounded-b-lg"
+      >
         {title}
       </h2>
       <div className="mb-10">
@@ -41,24 +45,51 @@ function ViewDetails() {
         />
         <div className="mt-4 md:mt-8 grid gap-4 grid-cols-1 md:grid-cols-3 px-4 md:px-8">
           <div className="col-span-2">
-            <h2 className="text-xl font-semibold">Category: {name}</h2>
-            <h2 className="text-lg font-medium text-gray-800">
+            <h2
+              data-aos="fade-down"
+              data-aos-duration="800"
+              className="text-xl font-semibold"
+            >
+              Category: {name}
+            </h2>
+            <h2
+              data-aos="fade-up"
+              data-aos-duration="900"
+              className="text-lg font-medium text-gray-800"
+            >
               <span className="underline font-semibold">Overview</span>:{' '}
               {description}
             </h2>
-            <p className="mt-6 md:mt-10 text-lg  md:text-xl font-semibold underline">
+            <p
+              data-aos="fade-down"
+              data-aos-duration="1000"
+              className="mt-6 md:mt-10 text-lg  md:text-xl font-semibold underline"
+            >
               Facilities
             </p>
             {facilities.map((item, index) => (
-              <li className="text-lg font-medium text-gray-800" key={index}>
+              <li
+                data-aos="fade-up"
+                data-aos-duration="1100"
+                className="text-lg font-medium text-gray-800"
+                key={index}
+              >
                 {item}
               </li>
             ))}
             <div>
-              <h2 className="mt-6 md:mt-10 text-lg  md:text-xl font-semibold underline">
+              <h2
+                data-aos="fade-down"
+                data-aos-duration="1200"
+                className="mt-6 md:mt-10 text-lg  md:text-xl font-semibold underline"
+              >
                 Property Details:
               </h2>
-              <div className="mt-3 space-y-2">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1400"
+                className="mt-3 space-y-2"
+              >
                 <p className="flex gap-2 items-center">
                   <IoMdPricetag />
                   Price: {price}
@@ -74,21 +105,38 @@ function ViewDetails() {
               </div>
             </div>
             <div>
-              <p className="mt-6 md:mt-10 text-lg  md:text-xl font-semibold underline">
+              <p
+                data-aos="fade-down"
+                data-aos-duration="1500"
+                className="mt-6 md:mt-10 text-lg  md:text-xl font-semibold underline"
+              >
                 Caution Note
               </p>
               {caution_note.map((item, index) => (
-                <li className="text-lg font-medium text-gray-800" key={index}>
+                <li
+                  data-aos="fade-up"
+                  data-aos-duration="1600"
+                  className="text-lg font-medium text-gray-800"
+                  key={index}
+                >
                   {item}
                 </li>
               ))}
             </div>
           </div>
           <div className="border border-secondary h-min rounded-md">
-            <h2 className="text-xl underline text-center mt-4 md:mt-6 font-semibold">
+            <h2
+              data-aos="fade--down"
+              data-aos-duration="800"
+              className="text-xl underline text-center mt-4 md:mt-6 font-semibold"
+            >
               Amenities
             </h2>
-            <div className="mx-4 md:mx-8 mt-3 space-y-2">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="900"
+              className="mx-4 md:mx-8 mt-3 space-y-2"
+            >
               <p className="flex gap-2 items-center">
                 {' '}
                 <TbAirConditioning className="border rounded-full p-1 text-2xl" />{' '}
@@ -105,7 +153,11 @@ function ViewDetails() {
                 Wi-fi
               </p>
             </div>
-            <div className=" rounded-b-md p-3 text-center text-textSecondary mt-3 space-y-2 bg-secondary text-lg md:text-xl font-medium lg:font-semibold">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="800"
+              className=" rounded-b-md p-3 text-center text-textSecondary mt-3 space-y-2 bg-secondary text-lg md:text-xl font-medium lg:font-semibold"
+            >
               <h3>To book, Call us: </h3>
               <h4>{contact_number}</h4>
               <p className="flex gap-2 items-center text-base justify-center text-textPrimary">
