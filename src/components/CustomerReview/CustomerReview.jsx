@@ -7,7 +7,7 @@ function CustomerReview() {
 
       <div className="grid gap-4 grid-cols-1 md:grid-cols-3 m-8">
         <div
-          data-aos="fade-right"
+          data-aos="fade-down"
           data-aos-duration="1700"
           className="border border-red-500 p-4 rounded-lg"
         >
@@ -188,7 +188,7 @@ function CustomerReview() {
           </p>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-duration="1900"
           className="border border-red-500 p-4 rounded-lg"
         >
@@ -279,7 +279,7 @@ function CustomerReview() {
           </p>
         </div>
         <div
-          data-aos="fade-right"
+          data-aos="fade-down"
           data-aos-duration="2000"
           className="border border-red-500 p-4 rounded-lg"
         >
@@ -461,7 +461,7 @@ function CustomerReview() {
           </p>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-duration="2200"
           className="border border-red-500 p-4 rounded-lg"
         >

@@ -25,7 +25,7 @@ function Estates({ estate }) {
       <div>
         <div className=" absolute  hover:-mt-10 hover:space-y-2.5 duration-300 bg-secondary text-textSecondary hover:bg-red-500 z-40 w-full px-4 md:px-6 py-4 rounded-b-lg">
           <h2
-            data-aos="fade-right"
+            data-aos="fade-down"
             data-aos-duration="1000"
             className="text-xl md:text-2xl font-medium md:font-semibold text-center"
           >
@@ -36,11 +36,11 @@ function Estates({ estate }) {
             data-aos-duration="1200"
             className="mx-10 bg-black"
           />
-          <p data-aos="fade-left" data-aos-duration="1000" className="mt-2">
+          <p data-aos="fade-up" data-aos-duration="1000" className="mt-2">
             Name: {name}
           </p>
           <div
-            data-aos="fade-right"
+            data-aos="fade-down"
             data-aos-duration="1400"
             className="flex justify-between pr-6  text-sm md:text-lg"
           >
@@ -49,12 +49,12 @@ function Estates({ estate }) {
               Location:
               {location}
             </p>
-            <p data-aos="fade-right" data-aos-duration="1400">
+            <p data-aos="fade-down" data-aos-duration="1400">
               Status:{status}
             </p>
           </div>
           <div
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-duration="1800"
             className="flex justify-between pr-6  text-sm md:text-lg"
           >
