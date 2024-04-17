@@ -7,7 +7,7 @@ EliteHomes is a premier online platform dedicated to showcasing luxurious real e
 [https://elite-homes-3b134.web.app/]
 
 ### Live site on surge
-[https://elithomes.surge.sh/]
+[https://elitehomes.surge.sh/]
 
 ### Features and Characteristics
 
