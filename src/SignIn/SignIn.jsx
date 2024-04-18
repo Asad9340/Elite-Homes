@@ -85,11 +85,8 @@ export function SignIn() {
               size="lg"
               type="email"
               name="email"
-              placeholder="name@mail.com"
+              label='Email'
               className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
-              labelProps={{
-                className: 'hidden',
-              }}
             />
           </div>
           <div className="mb-3">
@@ -103,11 +100,9 @@ export function SignIn() {
             </label>
             <Input
               size="lg"
+              label='Password'
               name="password"
-              placeholder="********"
-              labelProps={{
-                className: 'hidden',
-              }}
+
               className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200"
               type={passwordShown ? 'text' : 'password'}
               icon={
